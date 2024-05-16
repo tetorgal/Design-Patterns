@@ -1,0 +1,136 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Root Variables */
+:root {
+    --black: #181714;
+    --hover-black: #242424;
+    --white: #f5f5f5;
+    --primary-color: #007BFF;
+    --primary-color-hover: #0056b3;
+    --secondary-color: #f5f5f5;
+    --secondary-color-hover: #e0e0e0;
+    --text-color: #333;
+    --text-muted: #666;
+    --bg-color: #f5f5f5;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+letter-spacing: -0.05em;
+line-height: 1em;
+    margin: 0 0 1rem;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+
+p {
+    margin: 0 0 1.5rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Section Styles */
+.info-section {
+    width: 100%;
+    padding: 12px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.left-content, .right-content {
+    flex: 1;
+}
+
+.left-content {
+    padding-right: 2rem;
+}
+
+.right-content {
+    padding-left: 2rem;
+}
+
+.responsive-img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Button Styles */
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.primary-btn {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.primary-btn:hover {
+    background-color: var(--hover-black);
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid #ccc;
+}
+
+.secondary-btn:hover {
+    background-color: var(--secondary-color-hover);
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .block {
+        flex-direction: column;
+    }
+
+    .left-content, .right-content {
+        padding: 0;
+    }
+
+    .right-content {
+        margin-top: 1.5rem;
+    }
+    .responsive-img{
+        width: 80%;
+        height: 50%;
+    }
+}
